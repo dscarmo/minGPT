@@ -1,0 +1,27 @@
+[project]
+name = "minGPT"
+version = "0.0.1"
+description = "A PyTorch re-implementation of GPT"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Andrej Karpathy" }]
+requires-python = ">=3.9"
+dependencies = [
+    "torch",
+]
+
+[project.optional-dependencies]
+hf = ["transformers"]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "jupyter",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["mingpt"]
